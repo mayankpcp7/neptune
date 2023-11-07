@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+:root {
+  --fs-lg: 40px;
+  --fs-xl: 50px;
+  --fs-sm: 16px;
+  --fs-lmd: 28px;
+  --fs-md: 20px;
+  --fs-xsm: 14px;
+}
+.fs_xsm {
+  font-size: var(--fs-xsm);
+}
+.fs_sm {
+  font-size: var(--fs-sm);
+}
+.fs_xl {
+  font-size: var(--fs-xl);
+}
+.fs_lg {
+  font-size: var(--fs-lg);
+}
+.fs_md {
+  font-size: var(--fs-md);
+}
+.fs_lmd {
+  font-size: var(--fs-lmd);
+}
+.ff_mont {
+  font-family: Montserrat;
+}
+.text_lightblack {
+  color: #494734;
+}
+.bg_cream {
+  background-color: #fff8e5;
+}
+.bg_orange {
+  background: #fc9c73;
+}
+@media (max-width: 576px) {
+  :root {
+    --fs-xl: 32px;
+    --fs-lmd: 20px;
+    --fs-lg: 28px;
+    --fs-md: 16px;
+    --fs-sm:14px;
+  }
+}

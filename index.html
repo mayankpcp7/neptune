@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Neptune</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/images/svg/facvicon.svg"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/root.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- slick min css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- slick theam min css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- -----Aos----- -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body class="overflow-hidden">
+    <!--  ******************** Preloder ******************** -->
+    <div id="box" class="overflow-hidden">
+      <div
+        id="preloader-box"
+        class="d-flex flex-column justify-content-center align-items-center"
+      >
+        <div class="d-flex align-items-center">
+          <img
+            class="mx-auto loading me-4"
+            src="./assets/images/webp/loader.webp"
+            alt="preloder"
+          />
+          <p class="fs_xl text-white fw-bold animat mb-0">
+            Loading <span class="transition_300">...</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="overflow-hidden">
+      <header
+        class="min_vh_100 bg_header d-flex flex-column position-relative overflow-hidden"
+      >
+        <span class="main_layer w-100"></span>
+        <nav class="bg_nav z_100 py-2">
+          <div class="container py-1">
+            <div class="d-flex align0-items-center justify-content-between">
+              <img
+                class="position-relative z_100 cursor_pointer"
+                src="./assets/images/svg/navlogo.svg"
+                alt="navlogo"
+              />
+              <ul
+                class="d-none align-items-center d-md-flex li_type_none ps-0 mb-0 gap-4"
+              >
+                <li>
+                  <a
+                    class="text-black ff_mont fs_sm opacity_7 transtion_300"
+                    href="#home"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-black ff_mont fs_sm opacity_7 transtion_300"
+                    href="#about"
+                    >About us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-black ff_mont fs_sm opacity_7 transtion_300"
+                    href="#product"
+                    >Product</a
+                  >
+                </li>
+                <button
+                  class="nav_btn fw-semibold transtion_300 text-white fs_sm ff_mont border-0"
+                >
+                  Apply now
+                </button>
+              </ul>
+              <div
+                class="hamburger d-flex d-md-none flex-column justify-content-center"
+                onclick="shownav()"
+              >
+                <span></span>
+                <span class="my-1"></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <ul
+            class="d-flex z_200 transtion_300 flex-column align-items-center nav_md align0-items-center justify-content-center li_type_none ps-0 mb-0 gap-4 d-md-none"
+            id="nav"
+          >
+            <div class="cross_icon z_200" onclick="shownav()">
+              <span>&#10005;</span>
+            </div>
+            <li>
+              <a
+                class="text-black ff_mont fs_sm opacity_7 transtion_300"
+                href="#home"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-black ff_mont fs_sm opacity_7 transtion_300"
+                href="#about"
+                >About us</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-black ff_mont fs_sm opacity_7 transtion_300"
+                href="#product"
+                >Product</a
+              >
+            </li>
+            <button
+              class="nav_btn fw-semibold transtion_300 text-white fs_sm ff_mont border-0"
+            >
+              Apply now
+            </button>
+          </ul>
+        </nav>
+        <main
+          class="container d-flex flex-column justify-content-center flex-grow-1"
+        
+        >
+          <div
+            class="row justify-content-between mb-lg-5 pb-lg-5 mt-5 mt-lg-0 pt-3 pt-lg-0 align-items-center"
+          >
+            <div class="col-lg-6 mb-lg-5 pb-lg-5">
+              <div class="d-flex flex-column align-items-start">
+                <p
+                  class="ff_mont text-black bg_global px-md-4 px-3 py-2"
+                  data-aos="fade-right"
+                  data-aos-duration="1500"
+                >
+                  We are a global online school
+                </p>
+                <h1
+                  class="ff_mont fw-bold text-start mw_469"
+                  data-aos="fade-right"
+                  data-aos-duration="1700"
+                >
+                  Where 8-12 year children build confidence.
+                </h1>
+                <p
+                  class="text-start text-black ff_mont fs_sm mw_545"
+                  data-aos="fade-right"
+                  data-aos-duration="1900"
+                >
+                  We are global online school where students aged 8-12 grow
+                  their confidence by playing games with other. Our weekly
+                  classes challenge your child, help them make new friends, and
+                  build their confidence.
+                </p>
+                <button
+                  class="text-white fw-semibold fs_sm ff_mont mt-2 border-0 nav_btn"
+                >
+                  Apply now
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img
+                class="trtl_y10 w_100 mb_n10 min_hlg"
+                data-aos="fade-left"
+                data-aos-duration="1500"
+                src="./assets/images/webp/main_pic.webp"
+                alt="main"
+              />
+            </div>
+          </div>
+        </main>
+      </header>
+      <!-- -------------Built---------------- -->
+      <section class="bg_built py-md-0 overflow-hidden position-relative z_100">
+        <span class="orange_layer py-md-5 py-4">
+          <div class="container tr_rotate2">
+            <div
+              class="row justify-content-lg-between justify-content-center align-items-center"
+            >
+              <div class="col-lg-4 col-12">
+                <h2
+                  class="mb-0 text-white text-center w-100 mb-lg-0 mb-4 fs_lmd ff_mont d-inline-block"
+                  data-aos="zoom-out-down"
+                  data-aos-duration="1500"
+                >
+                  We Built teams at:
+                </h2>
+              </div>
+              <div class="col-lg-8 col-12">
+                <div
+                  class="d-flex w-100 justify-content-center align-items-center"
+                >
+                  <img
+                    class="px-3 w_md cursor_pointer hover_scale transtion_300"
+                    data-aos="zoom-out-up"
+                    data-aos-duration="1500"
+                    src="./assets/images/webp/class_dojo.webp"
+                    alt="class"
+                  />
+                  <img
+                    class="px-3 w_md cursor_pointer hover_scale transtion_300"
+                    data-aos="zoom-out-down"
+                    data-aos-duration="1500"
+                    src="./assets/images/webp/google.webp"
+                    alt="class"
+                  />
+                  <img
+                    class="px-3 w_md cursor_pointer hover_scale transtion_300"
+                    data-aos="zoom-out-up"
+                    data-aos-duration="1500"
+                    src="./assets/images/webp/mckinsey.webp"
+                    alt="class"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </span>
+      </section>
+      <!-- -------------Neptune---------------- -->
+      <section class="bg_cream bg_neptune py-5">
+        <div class="container py-5 my-xl-5">
+          <div
+            class="d-flex flex-column px-lg-4 px-2 mw_811 neptune mx-auto py-lg-5 py-4 my-3 position-relative hover_shadow transition_300"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
+            <img
+              class="neptune_layer"
+              src="./assets/images/png/neptune_layer.png"
+              alt="neptune_layer"
+            />
+            <img
+              class="neptune_boy wh_lg"
+              src="./assets/images/png/neptune_boy.png"
+              alt="neptune_boy"
+            />
+            <h2 class="fs_lg text-start ff_mont fw-bold ps-2 pt-2">
+              Why we created <span class="color_sky">Neptune</span>
+            </h2>
+            <ul
+              class="d-flex align-items-start justify-content-start flex-column ps-0 ps-4 ms-2 py-2"
+            >
+              <li class="fs_sm ff_mont opacity_80">
+                A smart 10 year old can ace their school work.
+              </li>
+              <li class="fs_sm ff_mont opacity_80 pt-2 mw_613">
+                Yet this same child can struggle on a team. Social anxiety may
+                overwhelm them, or they may be unable to stop talking to make
+                space for others. Rarely can they rally a group of peers
+                forward.
+              </li>
+              <li class="fs_sm ff_mont opacity_80 pt-2 mw_613">
+                <span class="fw-semibold">
+                  Consequential decisions are made by teams:</span
+                >
+                Performing surgery, negotiating contracts, repairing a
+                satellite.
+              </li>
+              <li class="fs_sm ff_mont opacity_80 pt-2 mw_559 pe-5">
+                We created Neptune to challenge children to succeed in high
+                performing teams.
+              </li>
+              <li class="fs_sm ff_mont opacity_80 pt-2 pe-5">
+                Where the consequences are limited to a video game.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- --------------Student Outcomes------ -->
+      <section class="bg_cream py-5 h_lg"id=product>
+        <div class="container pb-xl-5 mb-xl-5 pt-xl-5">
+          <div
+            class="d-flex justify-content-center align-items-center flex-column"
+            data-aos="fade-down"
+            data-aos-duration="1500"
+          >
+            <h2 class="text-center fs_lg text-black fw-bold">
+              Student <span class="color_sky"> Outcomes</span>
+            </h2>
+            <p
+              class="text-center fs_sm ff_mont text-black opacity_7 mw_867 mb-0"
+            >
+              Our experience across top tier firms, including McKinsey & Company
+              and Google, and our experience building ClassDojo, enables us to
+              teach your child from a perspective no one else can: We bring
+              battle tested industry techniques from the best problem solvers in
+              the world.
+            </p>
+            <h4 class="text-black fw-bold fs_sm pt-2">
+              Your child will learn to:
+            </h4>
+          </div>
+          <div
+            class="d-flex flex-lg-row justify-content-center h_lg flex-column align-items-center position-relative my-lg-5 pb-lg-5 pt-5"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+          >
+            <img
+              class="w-100 rotate_90 min_h300 z-0 d-lg-block d-none"
+              src="./assets/images/svg/timeline_arrow.svg"
+              alt="timeline_arrow"
+            />
+            <img
+              class="d-lg-none mt-5 pt-5"
+              src="./assets/images/svg/bg_timeline.svg"
+              alt="bg_timeline"
+            />
+
+            <div
+              class="timeline bg_arrow d-flex justify-content-center justify-content-lg-between w-100 flex-lg-row flex-column align-items-center position-absolute start-0"
+            >
+              <div
+                class="position-relative min-h170 min_w172 down time_bg transtion_300"
+              >
+                <svg
+                  class="w-100 transtion_300"
+                  width="197"
+                  height="220"
+                  viewBox="0 0 197 220"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g filter="url(#filter0_d_219_8807)">
+                    <path
+                      d="M92.4206 19.5722C96.1736 17.367 100.826 17.367 104.579 19.5722L165.758 55.521C169.427 57.6764 171.679 61.6127 171.679 65.8671V138.133C171.679 142.387 169.427 146.324 165.758 148.479L104.579 184.428C100.826 186.633 96.1736 186.633 92.4206 184.428L31.2415 148.479C27.5735 146.324 25.3209 142.387 25.3209 138.133V65.8671C25.3209 61.6127 27.5735 57.6764 31.2415 55.521L92.4206 19.5722Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M92.9273 20.4344C96.3674 18.4129 100.633 18.4129 104.073 20.4344L165.252 56.3832C168.614 58.3589 170.679 61.9673 170.679 65.8671V138.133C170.679 142.033 168.614 145.641 165.252 147.617L104.073 183.566C100.633 185.587 96.3674 185.587 92.9273 183.566L31.7481 147.617C28.3858 145.641 26.3209 142.033 26.3209 138.133V65.8671C26.3209 61.9673 28.3858 58.3589 31.7481 56.3832L92.9273 20.4344Z"
+                      stroke="#FD9E78"
+                      stroke-opacity="0.2"
+                      stroke-width="2"
+                    />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_d_219_8807"
+                      x="0.320801"
+                      y="0.918213"
+                      width="196.358"
+                      height="218.164"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix
+                        in="SourceAlpha"
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha"
+                      />
+                      <feOffset dy="8" />
+                      <feGaussianBlur stdDeviation="12.5" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix
+                        type="matrix"
+                        values="0 0 0 0 0.988235 0 0 0 0 0.611765 0 0 0 0 0.45098 0 0 0 0.12 0"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in2="BackgroundImageFix"
+                        result="effect1_dropShadow_219_8807"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_dropShadow_219_8807"
+                        result="shape"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+                <div
+                  class="d-flex w-100 px_31 justify-content-center flex-column align-items-center position-absolute box"
+                >
+                  <img
+                    src="./assets/images/png/timebox-1.png"
+                    alt="timebox-1"
+                  />
+                  <h4
+                    class="text-center fs_sm fw-semibold mb-0 px-3 pb-3 hover_white"
+                  >
+                    Build confidence
+                  </h4>
+                  <p
+                    class="fs_xsm opacity_80 text-white text-center pt-1 mw_177 box_content d-none"
+                  >
+                    Practice making decisions in uncertain environments with no
+                    clear direction.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="position-relative min-h170 min_w172 time_bg transtion_300 up"
+              >
+                <svg
+                  class="w-100 transtion_300"
+                  width="197"
+                  height="220"
+                  viewBox="0 0 197 220"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g filter="url(#filter0_d_219_8807)">
+                    <path
+                      d="M92.4206 19.5722C96.1736 17.367 100.826 17.367 104.579 19.5722L165.758 55.521C169.427 57.6764 171.679 61.6127 171.679 65.8671V138.133C171.679 142.387 169.427 146.324 165.758 148.479L104.579 184.428C100.826 186.633 96.1736 186.633 92.4206 184.428L31.2415 148.479C27.5735 146.324 25.3209 142.387 25.3209 138.133V65.8671C25.3209 61.6127 27.5735 57.6764 31.2415 55.521L92.4206 19.5722Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M92.9273 20.4344C96.3674 18.4129 100.633 18.4129 104.073 20.4344L165.252 56.3832C168.614 58.3589 170.679 61.9673 170.679 65.8671V138.133C170.679 142.033 168.614 145.641 165.252 147.617L104.073 183.566C100.633 185.587 96.3674 185.587 92.9273 183.566L31.7481 147.617C28.3858 145.641 26.3209 142.033 26.3209 138.133V65.8671C26.3209 61.9673 28.3858 58.3589 31.7481 56.3832L92.9273 20.4344Z"
+                      stroke="#FD9E78"
+                      stroke-opacity="0.2"
+                      stroke-width="2"
+                    />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_d_219_8807"
+                      x="0.320801"
+                      y="0.918213"
+                      width="196.358"
+                      height="218.164"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix
+                        in="SourceAlpha"
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha"
+                      />
+                      <feOffset dy="8" />
+                      <feGaussianBlur stdDeviation="12.5" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix
+                        type="matrix"
+                        values="0 0 0 0 0.988235 0 0 0 0 0.611765 0 0 0 0 0.45098 0 0 0 0.12 0"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in2="BackgroundImageFix"
+                        result="effect1_dropShadow_219_8807"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_dropShadow_219_8807"
+                        result="shape"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+                <div
+                  class="d-flex flex-column align-items-center w-100 justify-content-center px-xl-4 px-4 px-lg-1 position-absolute box"
+                >
+                  <img src="./assets/images/webp/box-2.webp" alt="timebox-2" />
+                  <h4
+                    class="text-center fs_sm fw-semibold pt-2 pb-3 px-3 mb-0 hover_white"
+                  >
+                    Regulate their voice
+                  </h4>
+                  <p
+                    class="fs_xsm opacity_80 text-white text-center mw_177 box_content pt-1 d-none"
+                  >
+                    Practice making decisions in uncertain environments with no
+                    clear direction.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="position-relative min-h170 min_w172 time_bg transtion_300 down"
+              >
+                <svg
+                  class="w-100 transtion_300"
+                  width="197"
+                  height="220"
+                  viewBox="0 0 197 220"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g filter="url(#filter0_d_219_8807)">
+                    <path
+                      d="M92.4206 19.5722C96.1736 17.367 100.826 17.367 104.579 19.5722L165.758 55.521C169.427 57.6764 171.679 61.6127 171.679 65.8671V138.133C171.679 142.387 169.427 146.324 165.758 148.479L104.579 184.428C100.826 186.633 96.1736 186.633 92.4206 184.428L31.2415 148.479C27.5735 146.324 25.3209 142.387 25.3209 138.133V65.8671C25.3209 61.6127 27.5735 57.6764 31.2415 55.521L92.4206 19.5722Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M92.9273 20.4344C96.3674 18.4129 100.633 18.4129 104.073 20.4344L165.252 56.3832C168.614 58.3589 170.679 61.9673 170.679 65.8671V138.133C170.679 142.033 168.614 145.641 165.252 147.617L104.073 183.566C100.633 185.587 96.3674 185.587 92.9273 183.566L31.7481 147.617C28.3858 145.641 26.3209 142.033 26.3209 138.133V65.8671C26.3209 61.9673 28.3858 58.3589 31.7481 56.3832L92.9273 20.4344Z"
+                      stroke="#FD9E78"
+                      stroke-opacity="0.2"
+                      stroke-width="2"
+                    />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_d_219_8807"
+                      x="0.320801"
+                      y="0.918213"
+                      width="196.358"
+                      height="218.164"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix
+                        in="SourceAlpha"
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha"
+                      />
+                      <feOffset dy="8" />
+                      <feGaussianBlur stdDeviation="12.5" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix
+                        type="matrix"
+                        values="0 0 0 0 0.988235 0 0 0 0 0.611765 0 0 0 0 0.45098 0 0 0 0.12 0"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in2="BackgroundImageFix"
+                        result="effect1_dropShadow_219_8807"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_dropShadow_219_8807"
+                        result="shape"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+                <div
+                  class="d-flex flex-column w-100 px-4 px-xl-4 px-lg-1 align-items-center justify-content-center position-absolute box"
+                >
+                  <img src="./assets/images/webp/box-3.webp" alt="timebox-1" />
+                  <h4
+                    class="text-center fs_sm fw-semibold pb-3 px-5 hover_white mb-0"
+                  >
+                    Navigate ambiguity
+                  </h4>
+                  <p
+                    class="fs_xsm opacity_80 text-white pt-1 text-center mw_177 pb-3 box_content d-none"
+                  >
+                    Practice making decisions in uncertain environments with no
+                    clear direction.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="position-relative min-h170 min_w172 time_bg transtion_300 up"
+              >
+                <svg
+                  class="w-100 transtion_300"
+                  width="197"
+                  height="220"
+                  viewBox="0 0 197 220"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g filter="url(#filter0_d_219_8807)">
+                    <path
+                      d="M92.4206 19.5722C96.1736 17.367 100.826 17.367 104.579 19.5722L165.758 55.521C169.427 57.6764 171.679 61.6127 171.679 65.8671V138.133C171.679 142.387 169.427 146.324 165.758 148.479L104.579 184.428C100.826 186.633 96.1736 186.633 92.4206 184.428L31.2415 148.479C27.5735 146.324 25.3209 142.387 25.3209 138.133V65.8671C25.3209 61.6127 27.5735 57.6764 31.2415 55.521L92.4206 19.5722Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M92.9273 20.4344C96.3674 18.4129 100.633 18.4129 104.073 20.4344L165.252 56.3832C168.614 58.3589 170.679 61.9673 170.679 65.8671V138.133C170.679 142.033 168.614 145.641 165.252 147.617L104.073 183.566C100.633 185.587 96.3674 185.587 92.9273 183.566L31.7481 147.617C28.3858 145.641 26.3209 142.033 26.3209 138.133V65.8671C26.3209 61.9673 28.3858 58.3589 31.7481 56.3832L92.9273 20.4344Z"
+                      stroke="#FD9E78"
+                      stroke-opacity="0.2"
+                      stroke-width="2"
+                    />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_d_219_8807"
+                      x="0.320801"
+                      y="0.918213"
+                      width="196.358"
+                      height="218.164"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix
+                        in="SourceAlpha"
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha"
+                      />
+                      <feOffset dy="8" />
+                      <feGaussianBlur stdDeviation="12.5" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix
+                        type="matrix"
+                        values="0 0 0 0 0.988235 0 0 0 0 0.611765 0 0 0 0 0.45098 0 0 0 0.12 0"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in2="BackgroundImageFix"
+                        result="effect1_dropShadow_219_8807"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_dropShadow_219_8807"
+                        result="shape"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+                <div
+                  class="d-flex flex-column w-100 px-xl-3 px-3 px-lg-1 align-items-center justify-content-center position-absolute box"
+                >
+                  <img src="./assets/images/webp/box-4.webp" alt="timebox-1" />
+                  <h4
+                    class="text-center fs_sm fw-semibold pb-3 px-5 hover_white mb-0"
+                  >
+                    Navigate conflict
+                  </h4>
+                  <p
+                    class="fs_xsm opacity_80 text-white pt-1 text-center mw_177 pb-3 box_content d-none"
+                  >
+                    Practice making decisions in uncertain environments with no
+                    clear direction.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="position-relative min-h170 min_w172 down time_bg transtion_300"
+              >
+                <svg
+                  class="w-100 transtion_300"
+                  width="197"
+                  height="220"
+                  viewBox="0 0 197 220"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g filter="url(#filter0_d_219_8807)">
+                    <path
+                      d="M92.4206 19.5722C96.1736 17.367 100.826 17.367 104.579 19.5722L165.758 55.521C169.427 57.6764 171.679 61.6127 171.679 65.8671V138.133C171.679 142.387 169.427 146.324 165.758 148.479L104.579 184.428C100.826 186.633 96.1736 186.633 92.4206 184.428L31.2415 148.479C27.5735 146.324 25.3209 142.387 25.3209 138.133V65.8671C25.3209 61.6127 27.5735 57.6764 31.2415 55.521L92.4206 19.5722Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M92.9273 20.4344C96.3674 18.4129 100.633 18.4129 104.073 20.4344L165.252 56.3832C168.614 58.3589 170.679 61.9673 170.679 65.8671V138.133C170.679 142.033 168.614 145.641 165.252 147.617L104.073 183.566C100.633 185.587 96.3674 185.587 92.9273 183.566L31.7481 147.617C28.3858 145.641 26.3209 142.033 26.3209 138.133V65.8671C26.3209 61.9673 28.3858 58.3589 31.7481 56.3832L92.9273 20.4344Z"
+                      stroke="#FD9E78"
+                      stroke-opacity="0.2"
+                      stroke-width="2"
+                    />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_d_219_8807"
+                      x="0.320801"
+                      y="0.918213"
+                      width="196.358"
+                      height="218.164"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix
+                        in="SourceAlpha"
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha"
+                      />
+                      <feOffset dy="8" />
+                      <feGaussianBlur stdDeviation="12.5" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix
+                        type="matrix"
+                        values="0 0 0 0 0.988235 0 0 0 0 0.611765 0 0 0 0 0.45098 0 0 0 0.12 0"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in2="BackgroundImageFix"
+                        result="effect1_dropShadow_219_8807"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_dropShadow_219_8807"
+                        result="shape"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+                <div
+                  class="d-flex w-100 px-xl-3 px-3 px-lg-1 w-100 flex-column align-items-center justify-content-center position-absolute box"
+                >
+                  <img src="./assets/images/webp/box-5.webp" alt="timebox-1" />
+                  <h4
+                    class="text-center fs_sm fw-semibold pb-3 px-5 hover_white mb-0 pt-2"
+                  >
+                    Reflect
+                  </h4>
+                  <p
+                    class="fs_xsm opacity_80 text-white pt-1 text-center mw_177 pb-3 box_content d-none"
+                  >
+                    Practice making decisions in uncertain environments with no
+                    clear direction.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="position-relative min-h170 me-4 me-lg-0 mb-5 mb-lg-0 min_w172 time_bg transtion_300 up"
+              >
+                <svg
+                  class="w-100 transtion_300"
+                  width="197"
+                  height="220"
+                  viewBox="0 0 197 220"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g filter="url(#filter0_d_219_8807)">
+                    <path
+                      d="M92.4206 19.5722C96.1736 17.367 100.826 17.367 104.579 19.5722L165.758 55.521C169.427 57.6764 171.679 61.6127 171.679 65.8671V138.133C171.679 142.387 169.427 146.324 165.758 148.479L104.579 184.428C100.826 186.633 96.1736 186.633 92.4206 184.428L31.2415 148.479C27.5735 146.324 25.3209 142.387 25.3209 138.133V65.8671C25.3209 61.6127 27.5735 57.6764 31.2415 55.521L92.4206 19.5722Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M92.9273 20.4344C96.3674 18.4129 100.633 18.4129 104.073 20.4344L165.252 56.3832C168.614 58.3589 170.679 61.9673 170.679 65.8671V138.133C170.679 142.033 168.614 145.641 165.252 147.617L104.073 183.566C100.633 185.587 96.3674 185.587 92.9273 183.566L31.7481 147.617C28.3858 145.641 26.3209 142.033 26.3209 138.133V65.8671C26.3209 61.9673 28.3858 58.3589 31.7481 56.3832L92.9273 20.4344Z"
+                      stroke="#FD9E78"
+                      stroke-opacity="0.2"
+                      stroke-width="2"
+                    />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_d_219_8807"
+                      x="0.320801"
+                      y="0.918213"
+                      width="196.358"
+                      height="218.164"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix
+                        in="SourceAlpha"
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha"
+                      />
+                      <feOffset dy="8" />
+                      <feGaussianBlur stdDeviation="12.5" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix
+                        type="matrix"
+                        values="0 0 0 0 0.988235 0 0 0 0 0.611765 0 0 0 0 0.45098 0 0 0 0.12 0"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in2="BackgroundImageFix"
+                        result="effect1_dropShadow_219_8807"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_dropShadow_219_8807"
+                        result="shape"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+                <div
+                  class="d-flex flex-column w-100 px-xl-3 px-3 px-lg-1 align-items-center justify-content-center position-absolute box"
+                >
+                  <img src="./assets/images/webp/box-6.webp" alt="timebox-1" />
+                  <h4
+                    class="text-center fs_sm fw-semibold pb-3 px-5 hover_white mb-0 pt-2"
+                  >
+                    Grasp motivations
+                  </h4>
+                  <p
+                    class="fs_xsm opacity_80 text-white pt-1 text-center mw_177 pb-3 box_content d-none"
+                  >
+                    Practice making decisions in uncertain environments with no
+                    clear direction.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- --------------Testimonials---------- -->
+      <section class="bg_orange py-5">
+        <p
+          class="text-center fs_lg text-white fw-bold py-lg-5"
+          data-aos="zoom-in-down"
+          data-aos-duration="1500"
+        >
+          Testimonials
+        </p>
+        <div class="container" data-aos="zoom-in-up" data-aos-duration="1500">
+          <div class="responsive">
+            <div class="d-flex flex-column align-items-center py-lg-5">
+              <p
+                class="text-white fs_md fst-italic fw-normal mw_635 text-center lh_161 position-relative testimonial"
+              >
+                Tortor varius ultrices felis sed. Lectus arcu dolor justo
+                consectetur varius sodales. Dictumst donec mattis sollicitudin
+                at. Non metus ornare pharetra sit. Velit at pulvinar eget ut.
+                Sociis urna fames nulla iaculis. Sit blandit arcu sed a diam sed
+                viverra sollicitudin diam.
+              </p>
+              <img
+                class="pb-1 pt-2"
+                src="./assets/images/svg/slider_man.svg"
+                alt="slider_man"
+              />
+              <h4 class="text-center text-white fs_md pt-2 fw-semibold fs_md">
+                Cameron Williamson
+              </h4>
+              <p class="text-center fs_sm fw-normal text-white">Designer</p>
+            </div>
+            <div class="d-flex flex-column align-items-center py-lg-5">
+              <p
+                class="text-white fs_md fst-italic fw-normal mw_635 text-center lh_161 position-relative testimonial"
+              >
+                Tortor varius ultrices felis sed. Lectus arcu dolor justo
+                consectetur varius sodales. Dictumst donec mattis sollicitudin
+                at. Non metus ornare pharetra sit. Velit at pulvinar eget ut.
+                Sociis urna fames nulla iaculis. Sit blandit arcu sed a diam sed
+                viverra sollicitudin diam.
+              </p>
+              <img
+                class="pb-1 pt-2"
+                src="./assets/images/svg/slider_man.svg"
+                alt="slider_man"
+              />
+              <h4 class="text-center text-white fs_md pt-2 fw-semibold fs_md">
+                Cameron Williamson
+              </h4>
+              <p class="text-center fs_sm fw-normal text-white">Designer</p>
+            </div>
+            <div class="d-flex flex-column align-items-center py-lg-5">
+              <p
+                class="text-white fs_md fst-italic fw-normal mw_635 text-center lh_161 position-relative testimonial"
+              >
+                Tortor varius ultrices felis sed. Lectus arcu dolor justo
+                consectetur varius sodales. Dictumst donec mattis sollicitudin
+                at. Non metus ornare pharetra sit. Velit at pulvinar eget ut.
+                Sociis urna fames nulla iaculis. Sit blandit arcu sed a diam sed
+                viverra sollicitudin diam.
+              </p>
+              <img
+                class="pb-1 pt-2"
+                src="./assets/images/svg/slider_man.svg"
+                alt="slider_man"
+              />
+              <h4 class="text-center text-white fs_md pt-2 fw-semibold fs_md">
+                Cameron Williamson
+              </h4>
+              <p class="text-center fs_sm fw-normal text-white">Designer</p>
+            </div>
+            <div class="d-flex flex-column align-items-center py-lg-5">
+              <p
+                class="text-white fs_md fst-italic fw-normal mw_635 text-center lh_161 position-relative testimonial"
+              >
+                Tortor varius ultrices felis sed. Lectus arcu dolor justo
+                consectetur varius sodales. Dictumst donec mattis sollicitudin
+                at. Non metus ornare pharetra sit. Velit at pulvinar eget ut.
+                Sociis urna fames nulla iaculis. Sit blandit arcu sed a diam sed
+                viverra sollicitudin diam.
+              </p>
+              <img
+                class="pb-1 pt-2"
+                src="./assets/images/svg/slider_man.svg"
+                alt="slider_man"
+              />
+              <h4 class="text-center text-white fs_md pt-2 fw-semibold fs_md">
+                Cameron Williamson
+              </h4>
+              <p class="text-center fs_sm fw-normal text-white">Designer</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!----------------Class offering---------->
+      <section class="bg_cream bg_classoffering py-5">
+        <div class="container py-lg-5">
+          <h2
+            class="text-center fs_lg ff_mont text-black fw-bold"
+            data-aos="zoom-out"
+            data-aos-duration="1500"
+          >
+            Class<span class="color_sky"> offering</span>
+          </h2>
+          <div
+            class="d-flex flex-column align-items-center py-5 pt-2"
+            data-aos="zoom-out"
+            data-aos-duration="1700"
+          >
+            <p class="ff_mont text-center fs_sm text-black opacity_80 mw_844">
+              Each week, classes of 10-12 students work together on
+              collaborative challenges presented through the medium of video
+              games, working through these challenges, students learn critical
+              skills which are missing from the curriculum in many schools
+              today: navigation highly ambiguous situations, resolving conflicts
+              with their peers, regulating their emotions during high stakes
+              situations, negotiating with competing teams.
+            </p>
+            <p class="text-center mw_844 ff_mont fw-normal mb-0">
+              Our teachers use the socratic method to coach our students-rather
+              than giving students the ‘correct’ answer, teachers ask questions
+              to aid the student in discovering the path for themselves. our
+              teachers don’t take themselves too seriously in class-they create
+              a fun, low-risk environment, in which students can feel free to
+              experiment with different collaboration styles.
+            </p>
+            <div class="d-flex align-items-center justify-content-center pt-4">
+              <p class="text-center ff_mont fw-semibold fs_lg mb-0">$195</p>
+              <p class="mb-0 ps-1 opacity_7">per month</p>
+            </div>
+          </div>
+          <div
+            class="d-flex flex-column align-items-center pb-lg-5 justify-content-center"
+          >
+            <div
+              class="row w-100 justify-content-center mw_844 align-items-center"
+            >
+              <div
+                class="col-md-3 col-sm-4 col-6 py-2"
+                data-aos="zoom-out-up"
+                data-aos-duration="1500"
+              >
+                <div
+                  class="d-flex flex-column justify-content-center align-items-center bg_hexagon py-5 h-100 px-3"
+                >
+                  <svg
+                    class="w-100 time_bg transtion_300 transtion_300"
+                    width="36"
+                    height="37"
+                    viewBox="0 0 36 37"
+                    fill="#000"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      y="0.806152"
+                      width="36"
+                      height="36"
+                      rx="18"
+                      fill="#FD9E78"
+                    />
+                    <path
+                      d="M24.6468 11.254C23.6313 11.9545 22.5831 12.7969 21.3477 13.8996C19.5555 15.4993 17.0145 18.2632 15.2503 20.535C14.9695 20.8899 14.7215 21.1739 14.6981 21.1597C14.6747 21.1455 13.664 20.4308 12.452 19.5742C11.2353 18.7129 10.2292 18.0124 10.2152 18.0124C10.1965 18.0124 9.87357 18.3248 9.49453 18.7129L8.80664 19.4133L9.16696 19.9055C11.1136 22.589 13.5563 26.1717 14.4454 27.653L14.7636 28.1831L15.1286 27.5489C16.3406 25.4476 18.2873 22.3902 19.7099 20.3315C20.6224 19.0205 21.5349 17.7616 21.6472 17.6574C21.708 17.6054 21.8858 17.3829 22.0543 17.1605C23.6921 14.9503 25.8166 12.5603 27.4311 11.112L27.5948 10.9653L26.3314 10.9606H25.0679L24.6468 11.254Z"
+                      fill="white"
+                    />
+                  </svg>
+                  <p class="text-center mw_139 pt-2 opacity_7 mb-0">
+                    60 minute class each week.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="col-md-3 col-sm-4 col-6 py-2"
+                data-aos="zoom-out-up"
+                data-aos-duration="1900"
+              >
+                <div
+                  class="d-flex flex-column justify-content-center align-items-center bg_hexagon py-5 h-100 px-3"
+                >
+                  <svg
+                    class="w-100 time_bg transtion_300 transtion_300"
+                    width="36"
+                    height="37"
+                    viewBox="0 0 36 37"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      y="0.806152"
+                      width="36"
+                      height="36"
+                      rx="18"
+                      fill="#FD9E78"
+                    />
+                    <path
+                      d="M24.6468 11.254C23.6313 11.9545 22.5831 12.7969 21.3477 13.8996C19.5555 15.4993 17.0145 18.2632 15.2503 20.535C14.9695 20.8899 14.7215 21.1739 14.6981 21.1597C14.6747 21.1455 13.664 20.4308 12.452 19.5742C11.2353 18.7129 10.2292 18.0124 10.2152 18.0124C10.1965 18.0124 9.87357 18.3248 9.49453 18.7129L8.80664 19.4133L9.16696 19.9055C11.1136 22.589 13.5563 26.1717 14.4454 27.653L14.7636 28.1831L15.1286 27.5489C16.3406 25.4476 18.2873 22.3902 19.7099 20.3315C20.6224 19.0205 21.5349 17.7616 21.6472 17.6574C21.708 17.6054 21.8858 17.3829 22.0543 17.1605C23.6921 14.9503 25.8166 12.5603 27.4311 11.112L27.5948 10.9653L26.3314 10.9606H25.0679L24.6468 11.254Z"
+                      fill="white"
+                    />
+                  </svg>
+                  <p class="text-center mw_139 pt-2 opacity_7 mb-0">
+                    12 students per class
+                  </p>
+                </div>
+              </div>
+              <div
+                class="col-md-3 col-sm-4 col-6 py-2"
+                data-aos="zoom-out-up"
+                data-aos-duration="2300"
+              >
+                <div
+                  class="d-flex flex-column justify-content-center align-items-center bg_hexagon py-5 h-100 px-3"
+                >
+                  <svg
+                    class="w-100 time_bg transtion_300 transtion_300"
+                    width="36"
+                    height="37"
+                    viewBox="0 0 36 37"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      y="0.806152"
+                      width="36"
+                      height="36"
+                      rx="18"
+                      fill="#FD9E78"
+                    />
+                    <path
+                      d="M24.6468 11.254C23.6313 11.9545 22.5831 12.7969 21.3477 13.8996C19.5555 15.4993 17.0145 18.2632 15.2503 20.535C14.9695 20.8899 14.7215 21.1739 14.6981 21.1597C14.6747 21.1455 13.664 20.4308 12.452 19.5742C11.2353 18.7129 10.2292 18.0124 10.2152 18.0124C10.1965 18.0124 9.87357 18.3248 9.49453 18.7129L8.80664 19.4133L9.16696 19.9055C11.1136 22.589 13.5563 26.1717 14.4454 27.653L14.7636 28.1831L15.1286 27.5489C16.3406 25.4476 18.2873 22.3902 19.7099 20.3315C20.6224 19.0205 21.5349 17.7616 21.6472 17.6574C21.708 17.6054 21.8858 17.3829 22.0543 17.1605C23.6921 14.9503 25.8166 12.5603 27.4311 11.112L27.5948 10.9653L26.3314 10.9606H25.0679L24.6468 11.254Z"
+                      fill="white"
+                    />
+                  </svg>
+                  <p class="text-center mw_139 pt-2 opacity_7 mb-0">
+                    Dedicated <br />
+                    teacher
+                  </p>
+                </div>
+              </div>
+              <div
+                class="col-md-3 col-sm-4 col-6 py-2"
+                data-aos="zoom-out-up"
+                data-aos-duration="2700"
+              >
+                <div
+                  class="d-flex flex-column justify-content-center align-items-center bg_hexagon py-5 h-100"
+                >
+                  <svg
+                    class="w-100 time_bg transtion_300 transtion_300"
+                    width="36"
+                    height="37"
+                    viewBox="0 0 36 37"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      y="0.806152"
+                      width="36"
+                      height="36"
+                      rx="18"
+                      fill="#FD9E78"
+                    />
+                    <path
+                      d="M24.6468 11.254C23.6313 11.9545 22.5831 12.7969 21.3477 13.8996C19.5555 15.4993 17.0145 18.2632 15.2503 20.535C14.9695 20.8899 14.7215 21.1739 14.6981 21.1597C14.6747 21.1455 13.664 20.4308 12.452 19.5742C11.2353 18.7129 10.2292 18.0124 10.2152 18.0124C10.1965 18.0124 9.87357 18.3248 9.49453 18.7129L8.80664 19.4133L9.16696 19.9055C11.1136 22.589 13.5563 26.1717 14.4454 27.653L14.7636 28.1831L15.1286 27.5489C16.3406 25.4476 18.2873 22.3902 19.7099 20.3315C20.6224 19.0205 21.5349 17.7616 21.6472 17.6574C21.708 17.6054 21.8858 17.3829 22.0543 17.1605C23.6921 14.9503 25.8166 12.5603 27.4311 11.112L27.5948 10.9653L26.3314 10.9606H25.0679L24.6468 11.254Z"
+                      fill="white"
+                    />
+                  </svg>
+                  <p class="text-center mw_139 pt-2 opacity_7 mb-0">
+                    Progress note home each month
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button class="nav_btn text-white fw-semibold border-0 my-5">
+              Apply now
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- --------------World Map------------->
+      <section class="bg_cream py-5">
+        <div class="container">
+          <h2 class="text-center fs_lg text-blac ff_mont fw-bold">
+            World <span class="color_sky"> Map</span>
+          </h2>
+          <p class="text-center ff_mont fs_sm opacity_80 fw-normal">
+            The students take a class with kids from all over the world
+          </p>
+          <div
+            class="d-flex align-items-center justify-content-center pt-5 mt-4 pb-lg-5"
+          >
+            <img
+              class="w-100"
+              data-aos="fade-zoom-in"
+              data-aos-duration="2300"
+              src="./assets/images/png/world_map.png"
+              alt="world_map"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- -------------  ABOUT US--------- -->
+      <section
+        class="bg_about mb-0 py-5 pb-0 pb-xl-5 overflow-hidden position-relative"
+        id="about"
+      >
+        <img
+          data-aos="fade-right"
+          data-aos-duration="1700"
+          class="about_left"
+          src="./assets/images/png/about_left.png"
+          alt="about_left"
+        />
+        <img
+          class="about_right"
+          data-aos="fade-left"
+          data-aos-duration="1800"
+          src="./assets/images/svg/aboutright.svg"
+          alt="aboutright"
+        />
+        <div class="container">
+          <h2 class="text-center fs_lg text-black mb-0 ff_mont fw-bold">
+            About <span class="color_sky">Us</span>
+          </h2>
+          <div
+            class="d-flex flex-column pt-xl-5 align-items-center justify-content-center pb-xl-5 mb-xl-5 position-relative about_box"
+            data-aos="fade-zoom-in"
+            data-aos-duration="2400"
+          >
+            <h5
+              class="ff_mont text-center mt-5 fw-semibold text-black mb-0 pb-1"
+            >
+              Stuart Reavley
+            </h5>
+            <p class="text-center fs_sm fw-normal ff_mont">Ceo & founder</p>
+            <p class="text-center ff_mont fs_sm mw_676 pb-xl-5 mb-xl-5">
+              Stuart has built high performing teams for the last 15 years
+              across McKinsey, Google, Uber, and ClassDojo. He has taught
+              students of various ages, from 12 year olds, to college students,
+              to young adults in their first job after college. Prior to
+              starting Neptune, Stuart ran the teaching organization at another
+              online school, where he led a team of 100 teachers who taught
+              5,000 6-14 year olds every week. Stuart holds a first class degree
+              in Computer Science from the University of Cambridge and is a
+              parent himself - he has a 7 year old daughter and a 5 year old
+              son.
+            </p>
+          </div>
+          <div
+            class="d-flex align-items-center justify-content-center d-xl-none"
+          >
+            <img
+              class="man_lg"
+              src="./assets/images/png/man_sm.png"
+              alt="man_sm"
+            />
+            <img
+              class="girl_lg pb-sm-5 pb-3"
+              src="./assets/images/png/girl_sm.png"
+              alt="girl_sm"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- ---------------Faqs------------- -->
+      <section class="bg_faq py-5">
+        <div class="container">
+          <h2
+            class="text-center fs_lg fw-bold text-black ff_mont mb-3 mt-lg-5 pt-lg-4"
+          >
+            Frequently Asked <span class="color_sky">Question</span>
+          </h2>
+          <div class="accordion my-lg-5 pt-4 pb-xl-5" id="accordionExample">
+            <div
+              class="accordion-item mt-4 bg-white"
+              data-aos="fade-right"
+              data-aos-duration="1500"
+            >
+              <h2 class="accordion-header border-0">
+                <button
+                  class="accordion-button shadow_none pt-4 rounded-top-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  <h4 class="ff_mont fw-medium fs_md text-black mb-0">
+                    Q.1 How do I get started with video gaming?
+                  </h4>
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body pt-0 pb-4">
+                  <p class="text-black opacity_7 ff_mont mb-0">
+                    To start gaming, you'll need a gaming platform (PC, console,
+                    or mobile), games, and possibly accessories like a
+                    controller or keyboard and mouse. Simply choose a game that
+                    interests you and start playing.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="accordion-item mt-4 bg-white"
+              data-aos="fade-left"
+              data-aos-duration="1500"
+            >
+              <h2 class="accordion-header border-0">
+                <button
+                  class="accordion-button shadow_none pt-4 rounded-top-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapsetwo"
+                  aria-expanded="false"
+                  aria-controls="collapsetwo"
+                >
+                  <h4 class="ff_mont fw-medium fs_md text-black mb-0">
+                    Q.2 Are video games only for children and teenagers?
+                  </h4>
+                </button>
+              </h2>
+              <div
+                id="collapsetwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body pt-0 pb-4">
+                  <p class="text-black opacity_7 ff_mont mb-0">
+                    To start gaming, you'll need a gaming platform (PC, console,
+                    or mobile), games, and possibly accessories like a
+                    controller or keyboard and mouse. Simply choose a game that
+                    interests you and start playing.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="accordion-item mt-4 bg-white"
+              data-aos="fade-right"
+              data-aos-duration="1500"
+            >
+              <h2 class="accordion-header border-0">
+                <button
+                  class="accordion-button shadow_none pt-4 rounded-top-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapsethree"
+                  aria-expanded="false"
+                  aria-controls="collapsethree"
+                >
+                  <h4 class="ff_mont fw-medium fs_md text-black mb-0">
+                    Q.3 What are some popular gaming platforms or consoles?
+                  </h4>
+                </button>
+              </h2>
+              <div
+                id="collapsethree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body pt-0 pb-4">
+                  <p class="text-black opacity_7 ff_mont mb-0">
+                    To start gaming, you'll need a gaming platform (PC, console,
+                    or mobile), games, and possibly accessories like a
+                    controller or keyboard and mouse. Simply choose a game that
+                    interests you and start playing.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="accordion-item mt-4 bg-white"
+              data-aos="fade-left"
+              data-aos-duration="1500"
+            >
+              <h2 class="accordion-header border-0">
+                <button
+                  class="accordion-button shadow_none pt-4 rounded-top-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapsefour"
+                  aria-expanded="true"
+                  aria-controls="collapsefour"
+                >
+                  <h4 class="ff_mont fw-medium fs_md text-black mb-0">
+                    Q.4 How can I find information about upcoming video game
+                    releases?
+                  </h4>
+                </button>
+              </h2>
+              <div
+                id="collapsefour"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body pt-0 pb-4">
+                  <p class="text-black opacity_7 ff_mont mb-0">
+                    To start gaming, you'll need a gaming platform (PC, console,
+                    or mobile), games, and possibly accessories like a
+                    controller or keyboard and mouse. Simply choose a game that
+                    interests you and start playing.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="accordion-item mt-4 bg-white"
+              data-aos="fade-right"
+              data-aos-duration="1500"
+            >
+              <h2 class="accordion-header border-0">
+                <button
+                  class="accordion-button shadow_none pt-4 rounded-top-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapsefive"
+                  aria-expanded="false"
+                  aria-controls="collapsefive"
+                >
+                  <h4 class="ff_mont fw-medium fs_md text-black mb-0">
+                    Q.5 How do I deal with in-game purchases and
+                    microtransactions?
+                  </h4>
+                </button>
+              </h2>
+              <div
+                id="collapsefive"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body pt-0 pb-4">
+                  <p class="text-black opacity_7 ff_mont mb-0">
+                    To start gaming, you'll need a gaming platform (PC, console,
+                    or mobile), games, and possibly accessories like a
+                    controller or keyboard and mouse. Simply choose a game that
+                    interests you and start playing.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="accordion-item mt-4 bg-white"
+              data-aos="fade-leftt"
+              data-aos-duration="1500"
+            >
+              <h2 class="accordion-header border-0">
+                <button
+                  class="accordion-button shadow_none pt-4 rounded-top-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapsesix"
+                  aria-expanded="false"
+                  aria-controls="collapsesix"
+                >
+                  <h4 class="ff_mont fw-medium fs_md text-black mb-0">
+                    Q.6 Nulla porta euismod urna orci gravida justo nulla quam?
+                  </h4>
+                </button>
+              </h2>
+              <div
+                id="collapsesix"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body pt-0 pb-4">
+                  <p class="text-black opacity_7 ff_mont mb-0">
+                    To start gaming, you'll need a gaming platform (PC, console,
+                    or mobile), games, and possibly accessories like a
+                    controller or keyboard and mouse. Simply choose a game that
+                    interests you and start playing.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="accordion-item mt-4 bg-white"
+              data-aos="fade-right"
+              data-aos-duration="1500"
+            >
+              <h2 class="accordion-header border-0">
+                <button
+                  class="accordion-button shadow_none pt-4 rounded-top-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseseven"
+                  aria-expanded="false"
+                  aria-controls="collapseseven"
+                >
+                  <h4 class="ff_mont fw-medium fs_md text-black mb-0">
+                    Q.7 Et erat suspendisse elit fermentum tincidunt eget
+                    nislestibulum?
+                  </h4>
+                </button>
+              </h2>
+              <div
+                id="collapseseven"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body pt-0 pb-4">
+                  <p class="text-black opacity_7 ff_mont mb-0">
+                    To start gaming, you'll need a gaming platform (PC, console,
+                    or mobile), games, and possibly accessories like a
+                    controller or keyboard and mouse. Simply choose a game that
+                    interests you and start playing.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="accordion-item mt-4 bg-white"
+              data-aos="fade-left"
+              data-aos-duration="1500"
+            >
+              <h2 class="accordion-header border-0">
+                <button
+                  class="accordion-button shadow_none pt-4 rounded-top-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseeight"
+                  aria-expanded="false"
+                  aria-controls="collapseeight"
+                >
+                  <h4 class="ff_mont fw-medium fs_md text-black mb-0">
+                    Q.8 Pharetra nisl arcu cursus semper dis augue praesent et
+                    lectus ut?
+                  </h4>
+                </button>
+              </h2>
+              <div
+                id="collapseeight"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body pt-0 pb-4">
+                  <p class="text-black opacity_7 ff_mont mb-0">
+                    To start gaming, you'll need a gaming platform (PC, console,
+                    or mobile), games, and possibly accessories like a
+                    controller or keyboard and mouse. Simply choose a game that
+                    interests you and start playing.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="accordion-item mt-4 bg-white"
+              data-aos="fade-right"
+              data-aos-duration="1500"
+            >
+              <h2 class="accordion-header border-0">
+                <button
+                  class="accordion-button shadow_none pt-4 rounded-top-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapsenine"
+                  aria-expanded="false"
+                  aria-controls="collapsenine"
+                >
+                  <h4 class="ff_mont fw-medium fs_md text-black mb-0">
+                    Q.9 Libero eu id integer semper. Pellentesque suspendisse
+                    nunc nunc?
+                  </h4>
+                </button>
+              </h2>
+              <div
+                id="collapsenine"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body pt-0 pb-4">
+                  <p class="text-black opacity_7 ff_mont mb-0">
+                    To start gaming, you'll need a gaming platform (PC, console,
+                    or mobile), games, and possibly accessories like a
+                    controller or keyboard and mouse. Simply choose a game that
+                    interests you and start playing.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="accordion-item mt-4 bg-white"
+              data-aos="fade-left"
+              data-aos-duration="1500"
+            >
+              <h2 class="accordion-header border-0">
+                <button
+                  class="accordion-button shadow_none pt-4 rounded-top-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseten"
+                  aria-expanded="false"
+                  aria-controls="collapseten"
+                >
+                  <h4 class="ff_mont fw-medium fs_md text-black mb-0">
+                    Q.10 Sed nibh augue laoreet massa vitae sit vitae. Vel
+                    dignissim a nam?
+                  </h4>
+                </button>
+              </h2>
+              <div
+                id="collapseten"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body pt-0 pb-4">
+                  <p class="text-black opacity_7 ff_mont mb-0">
+                    To start gaming, you'll need a gaming platform (PC, console,
+                    or mobile), games, and possibly accessories like a
+                    controller or keyboard and mouse. Simply choose a game that
+                    interests you and start playing.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!------------- footer----------- -->
+      <footer class="bg_footer pt-5 pb-3">
+        <div
+          class="d-flex flex-column align-items-center pt-lg-5 justify-content-center mt-lg-4"
+        >
+          <img
+            data-aos="zoom-in-down"
+            data-aos-duration="1500"
+            class="pb-1"
+            src="./assets/images/png/footerlogo.png"
+            alt="footerlogo"
+          />
+          <p
+            class="fs_sm text-white text-center opacity_7 pt-3 ff_mont"
+            data-aos="zoom-out"
+            data-aos-duration="1500"
+          >
+            Tortor ipsum dui accumsan malesuada feugiat quis
+          </p>
+          <div class="d-flex flex-column flex-md-row align-items-center mt-1">
+            <div
+              class="d-flex align-items-center gap-4"
+              data-aos="zoom-out"
+              data-aos-duration="1500"
+            >
+              <a
+                class="ff_mont fs_sm text-white fw-semibold cursor_pointer hover_orange transtion_300"
+                >Our approach</a
+              >
+              <a
+                class="ff_mont fs_sm text-white fw-semibold cursor_pointer hover_orange transtion_300"
+                >About us</a
+              >
+              <a
+                class="ff_mont fs_sm text-white fw-semibold cursor_pointer hover_orange transtion_300"
+                >Privacy policy</a
+              >
+            </div>
+            <div
+              class="d-flex align-items-center gap-4 ps-3 ms-2 mt-3 mt-md-0"
+              data-aos="zoom-out"
+              data-aos-duration="1500"
+            >
+              <a
+                class="ff_mont fs_sm text-white fw-semibold cursor_pointer hover_orange transtion_300"
+                >Terms as condations</a
+              >
+              <a
+                class="ff_mont fs_sm text-white fw-semibold cursor_pointer hover_orange transtion_300"
+                >Legal</a
+              >
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-2 my-5">
+            <img
+              class="hover_tr transtion_300 cursor_pointer"
+              src="./assets/images/svg/insta.svg"
+              alt="insta"
+            />
+            <img
+              class="hover_tr transtion_300 cursor_pointer"
+              src="./assets/images/svg/telegram.svg"
+              alt="telegram"
+            />
+            <img
+              class="hover_tr transtion_300 cursor_pointer"
+              src="./assets/images/svg/facebook.svg"
+              alt="facebook"
+            />
+          </div>
+          <span class="footer_line"></span>
+          <div class="container">
+            <div
+              class="d-flex flex-sm-row flex-column align-items-center justify-content-sm-between"
+            >
+              <p class="text-white opacity_7 ff_mont fw-normal mb-0 mt-3 pt-2">
+                copyright@2023 (All right reserved)
+              </p>
+              <p class="text-white opacity_7 ff_mont fw-normal mb-0 mt-3 pt-2">
+                hello@neptune.school | +1 (332) 278 0711
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- ******************** Back to Top ******************** -->
+    <div id="back-to-top" class="hidden">
+      <div class="d-flex justify-content-center align-items-center back-to-top">
+        <svg
+          width="19"
+          height="21"
+          viewBox="0 0 19 21"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.078 19.3818V4.55684L16.6832 9.09434C16.9458 9.30651 17.2842 9.40859 17.6242 9.37811C17.9641 9.34764 18.2777 9.18711 18.4959 8.93184C18.7141 8.67657 18.8191 8.34746 18.7878 8.01693C18.7564 7.6864 18.5913 7.38151 18.3288 7.16934L10.6152 0.919336C10.5538 0.877287 10.4894 0.839685 10.4224 0.806836C10.3581 0.806836 10.3195 0.806836 10.2552 0.719336C10.1078 0.662678 9.95091 0.633012 9.79241 0.631836C9.63391 0.633012 9.477 0.662678 9.32959 0.719336C9.26531 0.719336 9.22675 0.719336 9.16247 0.806836C9.09543 0.839685 9.03098 0.877287 8.96963 0.919336L1.25603 7.16934C1.11091 7.28686 0.994203 7.43404 0.914211 7.60039C0.83422 7.76675 0.792908 7.9482 0.793215 8.13184C0.792628 8.4239 0.897245 8.70695 1.0889 8.93184C1.19683 9.05841 1.32937 9.16304 1.47895 9.23973C1.62853 9.31642 1.79219 9.36366 1.96058 9.37876C2.12896 9.39385 2.29875 9.3765 2.46023 9.32769C2.6217 9.27889 2.77169 9.19959 2.9016 9.09434L8.50681 4.55684L8.50681 19.3818C8.50681 19.7134 8.64226 20.0313 8.88335 20.2657C9.12445 20.5001 9.45145 20.6318 9.79241 20.6318C10.1334 20.6318 10.4604 20.5001 10.7015 20.2657C10.9426 20.0313 11.078 19.7134 11.078 19.3818Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- j quairy min js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- slick min js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- --------------Preloader--------------- -->
+    <script>
+      const preloader = document.getElementById("box");
+      setTimeout(() => {
+        preloader.classList.add("d-none");
+        preloader.classList.add("pointer_event_none");
+        document.body.classList.remove("overflow-hidden");
+      }, 3000);
+    </script>
+
+    <!-- ------------------------Navbar---------------------- -->
+    <script>
+      function shownav() {
+        const a = document.getElementById("nav");
+        a.classList.toggle("shownav");
+        document.body.classList.toggle("overflow-hidden");
+
+      }
+    </script>
+    <!-- -------------------Back to top------------- -->
+    <script>
+      const backToTopButton = document.getElementById("back-to-top");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+          backToTopButton.style.display = "block";
+        } else {
+          backToTopButton.style.display = "none";
+        }
+      });
+
+      backToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+    <!-- ---------Aos------- -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true });
+    </script>
+    <script>
+      $(".responsive").slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: "linear",
+      });
+    </script>
+  </body>
+</html>
