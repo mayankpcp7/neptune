@@ -1,4 +1,5 @@
 * {
+  font-family: "Montserrat";
   text-decoration: none !important;
 }
 /* --------scrollbar--------- */
@@ -30,10 +31,10 @@
 .nav_btn {
   border-radius: 100px;
   background: var(--Green, #03abb5);
-  padding-top: 14px;
-  padding-bottom: 14px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 31.5px;
+  padding-right: 31.5px;
   transition: 300ms;
 }
 .nav_btn:hover {
@@ -71,8 +72,9 @@
   z-index: 200;
 }
 ul li a:hover {
-  font-weight: 600;
-  opacity: 100;
+-webkit-text-stroke-width: 1.1px;
+opacity: 100;
+ 
 }
 .z_100 {
   z-index: 100 !important;
@@ -184,11 +186,7 @@ ul li a:hover {
     0px -6px 0px 0px #5aa7a1;
 }
 /* -----------Student Outcomes----------- */
-.hover_shadow:hover {
-  box-shadow: 14px 18px 32px 2px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 14px 18px 32px 2px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 14px 18px 32px 2px rgba(0, 0, 0, 0.75);
-}
+
 .mw_867 {
   max-width: 867px;
 }
@@ -296,11 +294,11 @@ li.slick-active {
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-.bg_hexagon:hover rect{
-  fill:white !important;
+.bg_hexagon:hover rect {
+  fill: white !important;
 }
-.bg_hexagon:hover .time_bg path{
-  fill:#fd9e78;
+.bg_hexagon:hover .time_bg path {
+  fill: #fd9e78;
 }
 .mw_844 {
   max-width: 844px;
@@ -395,7 +393,7 @@ li.slick-active {
   top: 0;
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
+  background:linear-gradient(214deg, #ffec9c 13.42%, #bfdee3 87.92%);
   backdrop-filter: blur(6px);
   position: fixed;
   z-index: 1000 !important;
@@ -430,7 +428,7 @@ li.slick-active {
 }
 
 .back-to-top:hover {
-  background-color: var(--red-color);
+  background-color:;
 }
 
 @media (min-width: 1199px) {
