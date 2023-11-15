@@ -40,13 +40,14 @@
 .nav_btn:hover {
   background-color: white;
   color: #00acb7 !important;
+  border: 2px solid #00acb7;
 }
 .shownav {
   left: 0% !important;
 }
 .hamburger span {
   width: 30px;
-  height: 5px;
+  height: 3px;
   background-color: black;
 }
 .cross_icon {
@@ -60,6 +61,10 @@
 }
 .bg_hexagon {
   transition: 300ms;
+}
+.my_2{
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .cross_icon span {
@@ -425,10 +430,11 @@ li.slick-active {
   width: 45px;
   cursor: pointer;
   transition: all linear 250ms;
+  border: 2px solid #03abb5;
 }
 
 .back-to-top:hover {
-  background-color:;
+  background-color: #03abb5;
 }
 
 @media (min-width: 1199px) {
